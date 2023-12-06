@@ -1,7 +1,5 @@
-# curso-Tablero-Tienda
+# Panel de Administración
 
-A new Flutter project.
+Proyecto hecho con Flutter.
 
-## Getting Started
 
-FlutterFlow projects are built to run on the Flutter _stable_ release.
