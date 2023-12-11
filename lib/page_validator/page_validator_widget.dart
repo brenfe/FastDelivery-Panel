@@ -74,27 +74,24 @@ class _PageValidatorWidgetState extends State<PageValidatorWidget> {
       );
     }
 
-    return Title(
-        title: 'pageValidator',
-        color: FlutterFlowTheme.of(context).primary.withAlpha(0XFF),
-        child: GestureDetector(
-          onTap: () => _model.unfocusNode.canRequestFocus
-              ? FocusScope.of(context).requestFocus(_model.unfocusNode)
-              : FocusScope.of(context).unfocus(),
-          child: Scaffold(
-            key: scaffoldKey,
-            backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-            body: SafeArea(
-              top: true,
-              child: Align(
-                alignment: AlignmentDirectional(0.00, 0.00),
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [],
-                ),
-              ),
+    return GestureDetector(
+      onTap: () => _model.unfocusNode.canRequestFocus
+          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
+          : FocusScope.of(context).unfocus(),
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        body: SafeArea(
+          top: true,
+          child: Align(
+            alignment: AlignmentDirectional(0.00, 0.00),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [],
             ),
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
